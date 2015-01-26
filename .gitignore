@@ -2,5 +2,7 @@
 .sass-cache
 .codekit-cache
 bower_components
+node_modules
+*.log
 *.sublime-project
 *.sublime-workspace
