@@ -1,0 +1,6 @@
+.DS_Store
+.sass-cache
+.codekit-cache
+bower_components
+*.sublime-project
+*.sublime-workspace
