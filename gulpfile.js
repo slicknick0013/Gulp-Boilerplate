@@ -15,7 +15,31 @@ var gulp         = require('gulp'),
     notify       = require('gulp-notify'),
     cache        = require('gulp-cache'),
     livereload   = require('gulp-livereload'),
-    del          = require('del');
+    del          = require('del'),
+    connect      = require('gulp-connect');
+
+gulp.task('include', function () {
+    return gulp.src('src/**/*.html')
+        .pipe(include({
+            prefix: '@@',
+            basepath: 'src'
+        }))
+        .pipe(gulp.dest('build'))
+        .pipe(notify({message: 'Include task complete'}));
+});
+
+gulp.task('htmlmin', function () {
+    var opts = {
+        comments: false,
+        quotes: true,
+        spare: true
+    };
+
+    return gulp.src('build/views/**/*.html')
+        .pipe(htmlmin(opts))
+        .pipe(gulp.dest('dist'))
+        .pipe(notify({message: 'HTMLmin task complete'}));
+});
 
 gulp.task('styles', function () {
     return sass('src/assets/sass/main.scss', {
@@ -61,30 +85,15 @@ gulp.task('svg', function () {
         .pipe(notify({message: 'SVG task complete'}));
 });
 
-gulp.task('include', function () {
-    return gulp.src('src/**/*.html')
-        .pipe(include({
-            prefix: '@@',
-            basepath: ''
-        }))
-        .pipe(gulp.dest('dist/html/unminified'))
-        .pipe(notify({message: 'Include task complete'}));
-});
-
-gulp.task('htmlmin', function () {
-    var opts = {
-        comments: false,
-        spare: true
-    };
-
-    return gulp.src('dist/html/unminified/**/*.html')
-        .pipe(htmlmin(opts))
-        .pipe(gulp.dest('dist/html/minified'))
-        .pipe(notify({message: 'HTMLmin task complete'}));
+gulp.task('webserver', function() {
+    connect.server({
+        livereload: true,
+        root: 'dist/html/minified'
+    });
 });
 
 gulp.task('clean', function(cb) {
-    del(['dist/assets/html', 'dist/assets/styles', 'dist/assets/js', 'dist/assets/img', 'dist/assets/svg'], cb)
+    del(['build', 'dist'], cb)
 });
 
 gulp.task('default', ['clean'], function () {
@@ -96,7 +105,7 @@ gulp.task('watch', function() {
     livereload.listen();
 
     // Watch .html files
-    gulp.watch('src/**/*.html', ['include', 'htmlmin']);
+    gulp.watch('src/views/**/*.html', ['include', 'htmlmin']);
 
     // Watch .scss files
     gulp.watch('src/assets/styles/**/*.scss', ['styles']);
