@@ -78,6 +78,60 @@
                 <hr>
                 <p>The <code>hr</code> is a quick way to create separation inside content blocks.</p>
             </article>
+
+            <article class="group" id="form-elements">
+                <h2>Forms</h2>
+                <p>This section includes styling for all form elements.</p>
+                <form action="" method="get">
+                    <fieldset>
+                        <legend>Contact Info</legend>
+                        <p>All fields are <em class="required">*</em> required.</p>
+                        <ol>
+                            <li>
+                                <label for="f_name">First name</label>
+                                <input id="f_name" name="f_name" type="text">
+                            </li>
+                            <li>
+                                <label for="l_name">Last name</label>
+                                <input id="l_name" name="l_name" type="text">
+                            </li>
+                            <li>
+                                <label for="email">Email</label>
+                                <input id="email" name="email" type="email">
+                            </li>
+                        </ol>
+                    </fieldset>
+                    <fieldset id="section-address">
+                        <legend>Location</legend>
+                        <ol>
+                            <li>
+                                <label for="adr_1">Street address</label>
+                                <input id="adr_1" name="adr_1" type="text">
+                            </li>
+                            <li>
+                                <label for="adr_2">Address line two</label>
+                                <input id="adr_2" name="adr_2" type="text">
+                            </li>
+                            <li>
+                                <label for="zip">ZIP</label>
+                                <input id="zip" name="zip" type="text">
+                            </li>
+                        </ol>
+                    </fieldset>
+
+                    <fieldset id="comments">
+                        <legend>Comments</legend>
+                        <ol>
+                            <li>
+                                <label for="message">Message</label>
+                                <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                            </li>
+                        </ol>
+                    </fieldset>
+
+                    <button type="submit">Send it</button>
+                </form>
+            </article>
         </section><!-- /.content-main -->
 
 @@include('../src/views/inc/footer.html')

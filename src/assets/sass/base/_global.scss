@@ -1,6 +1,8 @@
 @include set-relative-type();
 
-body {
+body,
+input,
+textarea {
     color: $color-main;
     font-family: $font-main;
 }

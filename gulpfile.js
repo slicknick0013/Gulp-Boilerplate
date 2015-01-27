@@ -97,7 +97,7 @@ gulp.task('clean', function(cb) {
     del(['build', 'dist'], cb)
 });
 
-gulp.task('default', ['clean'], function () {
+gulp.task('default', function () {
     gulp.start('include', 'htmlmin', 'styles', 'scripts', 'images', 'svg');
 });
 

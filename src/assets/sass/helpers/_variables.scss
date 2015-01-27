@@ -21,5 +21,9 @@ $color-link-hover: rgba(68, 117, 153, 0.75);
 $color-link-visited: rgba(68, 117, 153, 0.50);
 
 // Color: buttons
-$color-button: rgb(255, 127, 0);
-$color-button-hover: rgba(255, 127, 0, 0.75);
+$color-button: rgb(255, 255, 255);
+$color-button-bg: rgb(255, 127, 0);
+$color-button-bg-hover: rgba(255, 127, 0, 0.75);
+
+// Color: forms
+$color-input-border: rgb(200,200,200);

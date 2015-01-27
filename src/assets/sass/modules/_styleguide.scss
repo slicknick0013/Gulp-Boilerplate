@@ -47,10 +47,10 @@
 }
 
 .button {
-    background-color: $color-button;
+    background-color: $color-button-bg;
 
     &:hover,
     &:focus {
-        background-color: $color-button-hover;
+        background-color: $color-button-bg-hover;
     }
 }
