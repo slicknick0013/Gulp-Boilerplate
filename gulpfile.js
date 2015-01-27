@@ -43,15 +43,16 @@ gulp.task('htmlmin', function () {
 
 gulp.task('styles', function () {
     return sass('src/assets/sass/main.scss', {
-        style: 'expanded',
-        precision: 10,
-        defaultEncoding: 'UTF-8',
-        lineNumbers: true
-    })
+            style: 'expanded',
+            precision: 10,
+            defaultEncoding: 'UTF-8',
+            lineNumbers: true
+        })
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
         .pipe(gulp.dest('dist/assets/styles'))
+        .pipe(autoprefixer())
         .pipe(notify({message: 'Styles task complete'}));
 });
 
