@@ -1,5 +1,5 @@
 $grids-debug: true;
-$grids-debug-color: rgba(0,0,0,0.2);
+$grids-debug-color: rgba(68, 117, 153, 0.25);
 
 .group {
     //@extend %clearfix;
@@ -20,9 +20,9 @@ $grids-debug-color: rgba(0,0,0,0.2);
             background-color: $grids-debug-color;
         }
 
-        @include span(3 of 9);
+        @include span(2 of 4);
 
-        &:last-child {
+        &:nth-child(2n+2) {
             margin-right: 0;
         }
     }
@@ -35,15 +35,17 @@ $grids-debug-color: rgba(0,0,0,0.2);
         background-color: $grids-debug-color;
     }
 
-    .col {
-        @if $grids-debug == true {
-            background-color: $grids-debug-color;
-        }
+    @media screen and (min-width: $breakpoint-two) {
+        .col {
+            @if $grids-debug == true {
+                background-color: $grids-debug-color;
+            }
 
-        @include span(3 of 9);
+            @include span(3 of 9);
 
-        &:nth-child(3n+3) {
-            margin-right: 0;
+            &:nth-child(3n+3) {
+                margin-right: 0;
+            }
         }
     }
 }
