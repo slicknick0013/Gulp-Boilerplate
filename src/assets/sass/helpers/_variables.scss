@@ -1,7 +1,18 @@
 // Layout
 $breakpoint-one: 40em;
+$breakpoint-two: 50em;
 $breakpoint-final: 60em;
 
-/* Color */
+// Color
 $color-brand: rgb(195, 32, 47);
 $color-brand-trans: rgba(195, 32, 47, 0.75);
+
+// Color: Typography
+$color-heading: rgb(50, 50, 50);
+$color-main: rgb(25, 25, 25);
+
+// Color: links
+$color-link: rgb(32, 131, 197);
+$color-link-hover: rgba(32, 131, 197, 0.75);
+
+// Color: buttons

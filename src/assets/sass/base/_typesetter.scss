@@ -1,8 +1,8 @@
 // require helpers/
 $browser-context: 16;
 $baseline: 24;
-$typesetter-horizontal-debug: false;
-$typesetter-vertical-debug: true;
+$typesetter-horizontal-debug: true;
+$typesetter-vertical-debug: false;
 
 @mixin repeating-linear-gradient($gradients) {
     background: -webkit-repeating-linear-gradient( $gradients );
@@ -47,37 +47,37 @@ $typesetter-vertical-debug: true;
 
 @mixin set-relative-type() {
     h1 {
-        @include setType(24);
+        @include setType(32);
     }
 
     h2,
     article h1 {
-        @include setType(18);
+        @include setType(24);
     }
 
     h3 {
         @include setType(18);
     }
 
-    h4 {
-        @include setType(18);
-    }
-
-    h5, h6, p, ul, ol, dl, td, th, .vcard {
+    h4, h5, h6, p, ul, ol, dl, td, th, .vcard {
         @include setType(16);
     }
 
     @media all and (min-width: $breakpoint-one) {
         h1 {
-            @include setType(36);
+            @include setType(48);
         }
 
         h2,
         article h1 {
-            @include setType(18);
+            @include setType(36);
         }
 
         h3 {
+            @include setType(32);
+        }
+
+        h4 {
             @include setType(24);
         }
     }

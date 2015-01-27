@@ -1,8 +1,41 @@
 @@include('../src/views/inc/header.html', {
-    "title": "Home",
-    "description": "Gulp Boilerplate"
+    "title": "Style Guide",
+    "description": "Gulp Boilerplate style guide"
 })
 
-        <h1>Hello World</h1>
+        <section class="content-main">
+            <article class="group">
+                <h2>Grids</h2>
+                <p>The grid system uses <a href="http://susy.oddbird.net/" rel="external">Susy</a>, a Sass layout framework.</p>
+
+                <div class="two-to-three">
+                    <div class="col">
+                        <p>Moe</p>
+                    </div>
+                    <div class="col">
+                        <p>Larry</p>
+                    </div>
+                    <div class="col">
+                        <p>Shemp</p>
+                    </div>
+                    <div class="col">
+                        <p>Curly</p>
+                    </div>
+                    <div class="col">
+                        <p>Joe</p>
+                    </div>
+                </div><!-- /.grid-vary -->
+            </article><!-- /.group -->
+
+            <article class="group">
+                <h2>Typography</h2>
+                <p>All typography and vertical rhythm uses base HTML elements (<code>h1, h2, p, table, etc.</code>) to set styles. The Sass module controlling this is a custom module found in <code>/src/assets/sass/base/_typesetter.scss</code></p>
+            </article>
+
+            <article class="group">
+                <h2>Color</h2>
+                <p>Base colors are managed as variables and can be found in <code>/src/assets/sass/helpers/_variables.scss</code></p>
+            </article>
+        </section>
 
 @@include('../src/views/inc/footer.html')

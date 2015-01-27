@@ -43,10 +43,11 @@ gulp.task('htmlmin', function () {
 
 gulp.task('styles', function () {
     return sass('src/assets/sass/main.scss', {
-            style: 'expanded',
-            precision: 10,
             defaultEncoding: 'UTF-8',
-            lineNumbers: true
+            lineNumbers: true,
+            precision: 10,
+            require: 'susy',
+            style: 'expanded'
         })
         .on('error', function (err) {
             console.error('Error!', err.message);
@@ -86,9 +87,8 @@ gulp.task('svg', function () {
         .pipe(notify({message: 'SVG task complete'}));
 });
 
-gulp.task('webserver', function() {
+gulp.task('serve', function() {
     connect.server({
-        livereload: true,
         root: 'dist/'
     });
 });
@@ -115,8 +115,4 @@ gulp.task('watch', function() {
 
     // Watch image files
     gulp.watch('src/assets/img/**/*', ['images']);
-
-    // Watch any files in dist/, reload on change
-    gulp.watch(['dist/**']).on('change', livereload.changed);
-
 });
