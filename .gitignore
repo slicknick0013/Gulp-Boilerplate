@@ -3,6 +3,8 @@
 .codekit-cache
 bower_components
 node_modules
+dist
+build
 *.log
 *.sublime-project
 *.sublime-workspace

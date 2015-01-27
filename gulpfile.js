@@ -88,7 +88,7 @@ gulp.task('svg', function () {
 gulp.task('webserver', function() {
     connect.server({
         livereload: true,
-        root: 'dist/html/minified'
+        root: 'dist/'
     });
 });
 
@@ -101,14 +101,13 @@ gulp.task('default', ['clean'], function () {
 });
 
 gulp.task('watch', function() {
-    // Create LiveReload server
-    livereload.listen();
 
     // Watch .html files
-    gulp.watch('src/views/**/*.html', ['include', 'htmlmin']);
+    gulp.watch('src/views/**/*.html', ['include']);
+    gulp.watch('build/**/*.html', ['htmlmin']);
 
     // Watch .scss files
-    gulp.watch('src/assets/styles/**/*.scss', ['styles']);
+    gulp.watch('src/assets/sass/**/*.scss', ['styles']);
 
     // Watch .js files
     gulp.watch('src/assets/js/**/*.js', ['scripts']);
