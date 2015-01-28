@@ -6,14 +6,25 @@ table {
 
     th,
     td {
-        padding: 0 6px;
+        padding: 0 12px;
         text-align: center;
     }
 
     thead {
-        th {
+        th, td {
             background-color: $color-th-bg;
             color: $color-th;
+            padding: 6px 12px;
+        }
+    }
+
+    tfoot {
+        font-weight: 700;
+
+        th, td {
+            background-color: $color-foot-bg;
+            color: $color-foot;
+            padding: 6px 12px;
         }
     }
 

@@ -30,6 +30,14 @@ a {
     }
 }
 
+dt {
+    font-weight: 700;
+}
+
+dd {
+    margin-bottom: $baseline + px;
+}
+
 hr {
     background-color: $color-main;
     border: 0;

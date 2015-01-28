@@ -26,6 +26,20 @@
                     </div>
                 </div>
 
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;div class="halves"&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Moe Howard&lt;/h4&gt;
+        &lt;p&gt;The alpha stooge.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Larry Fine&lt;/h4&gt;
+        &lt;p&gt;A virtuoso violinist, and middle stooge.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
                 <h3>Example: <code>thirds</code></h3>
                 <p>The three-column layout does not kick in until <code>$breakpoint-two</code>.</p>
                 <div class="thirds">
@@ -42,6 +56,24 @@
                         <p>The funniest stooge and favorite by many.</p>
                     </div>
                 </div>
+
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;div class="thirds"&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Moe Howard&lt;/h4&gt;
+        &lt;p&gt;The alpha stooge.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Larry Fine&lt;/h4&gt;
+        &lt;p&gt;A virtuoso violinist, and middle stooge.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Curly Howard&lt;/h4&gt;
+        &lt;p&gt;The funniest stooge and favorite by many.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
                 <h3>Example: <code>two-to-three</code></h3>
                 <div class="two-to-three">
@@ -65,13 +97,101 @@
                         <h4>Joe</h4>
                         <p>What can you say?</p>
                     </div>
-                </div><!-- /.grid-vary -->
+                </div><!-- /.two-to-three -->
+
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;div class="two-to-three"&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Moe Howard&lt;/h4&gt;
+        &lt;p&gt;The alpha stooge.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Larry Fine&lt;/h4&gt;
+        &lt;p&gt;A virtuoso violinist, and middle stooge.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Shemp Howard&lt;/h4&gt;
+        &lt;p&gt;Stooge antics led to post-traumatic stress disorder.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Curly Howard&lt;/h4&gt;
+        &lt;p&gt;The funniest stooge and favorite by many.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="col"&gt;
+        &lt;h4&gt;Joe&lt;/h4&gt;
+        &lt;p&gt;What can you say?&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;!-- /.two-to-three --&gt;
+</code></pre>
             </article><!-- /.group -->
 
             <article class="group" id="typography">
                 <h2>Typography</h2>
                 <p>All typography and vertical rhythm uses base HTML elements (<code>h1, h2, p, table, etc.</code>) to set styles. The Sass module controlling this is a custom module found in <code>/src/assets/sass/base/_typesetter.scss</code></p>
                 <p>Headings get a sans-serif font while main body text gets a serif treatment. Those fonts are managed as variables and can be found in <code>/src/assets/sass/helpers/_variables.scss</code></p>
+            </article>
+
+            <article class="group" id="lists">
+                <h2>Lists</h2>
+
+                <h3>Unordered lists</h3>
+                <ul>
+                    <li>Item 01</li>
+                    <li>Item 02</li>
+                    <li>Item 03</li>
+                    <li>Item 04</li>
+                    <li>Item 05</li>
+                </ul>
+
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;ul&gt;
+    &lt;li&gt;Item 01&lt;/li&gt;
+    &lt;li&gt;Item 02&lt;/li&gt;
+    &lt;li&gt;Item 03&lt;/li&gt;
+    &lt;li&gt;Item 04&lt;/li&gt;
+    &lt;li&gt;Item 05&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+
+                <h3>Ordered lists</h3>
+                <ol>
+                    <li>Item 01</li>
+                    <li>Item 02</li>
+                    <li>Item 03</li>
+                    <li>Item 04</li>
+                    <li>Item 05</li>
+                </ol>
+
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;ol&gt;
+    &lt;li&gt;Item 01&lt;/li&gt;
+    &lt;li&gt;Item 02&lt;/li&gt;
+    &lt;li&gt;Item 03&lt;/li&gt;
+    &lt;li&gt;Item 04&lt;/li&gt;
+    &lt;li&gt;Item 05&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre>
+
+                <h3>Definition lists</h3>
+                <dl>
+                    <dt>Turbocharger</dt>
+                    <dd>a turbine-driven forced induction device that increases an engine's efficiency and power by forcing extra air into the combustion chamber</dd>
+                    <dt>Intake valve</dt>
+                    <dd>a valve in the cylinder head of an internal-combustion engine that opens at the proper moment in the cycle to allow the fuel-air mixture to be drawn into the cylinder</dd>
+                </dl>
+
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;dl&gt;
+    &lt;dt&gt;Turbocharger&lt;/dt&gt;
+    &lt;dd&gt;a turbine-driven forced induction device that increases an engine's efficiency and power by forcing extra air into the combustion chamber&lt;/dd&gt;
+    &lt;dt&gt;Intake valve&lt;/dt&gt;
+    &lt;dd&gt;a valve in the cylinder head of an internal-combustion engine that opens at the proper moment in the cycle to allow the fuel-air mixture to be drawn into the cylinder&lt;/dd&gt;
+&lt;/dl&gt;
+</code></pre>
             </article>
 
             <article class="group" id="color">
@@ -116,7 +236,7 @@
                     <tfoot>
                         <tr>
                             <th scope="row" colspan="3" class="left">Total</th>
-                            <td class="currency">$12,3874.37</td>
+                            <td class="currency">$11,874.72</td>
                         </tr>
                     </tfoot>
                     <thead>
@@ -132,16 +252,62 @@
                             <td>Jeffrey</td>
                             <td>02/23/2008</td>
                             <td>St. Louis</td>
-                            <td class="currency">$3,220.37</td>
+                            <td class="currency">$3,300.37</td>
                         </tr>
                         <tr>
                             <td>Laura</td>
                             <td>02/12/2008</td>
-                            <td>St. Louis</td>
-                            <td class="currency">$2,111.00</td>
+                            <td>Washington D.C.</td>
+                            <td class="currency">$2,578.22</td>
+                        </tr>
+                        <tr>
+                            <td>Tim</td>
+                            <td>02/06/2008</td>
+                            <td>Seattle</td>
+                            <td class="currency">$5,996.13</td>
                         </tr>
                     </tbody>
                 </table>
+
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;table&gt;
+    &lt;tfoot&gt;
+        &lt;tr&gt;
+            &lt;th scope="row" colspan="3" class="left"&gt;Total&lt;/th&gt;
+            &lt;td class="currency"&gt;$11,874.72&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tfoot&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th scope="col"&gt;Name&lt;/th&gt;
+            &lt;th scope="col"&gt;Dates&lt;/th&gt;
+            &lt;th scope="col"&gt;City&lt;/th&gt;
+            &lt;th scope="col" class="currency"&gt;Currency&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Jeffrey&lt;/td&gt;
+            &lt;td&gt;02/23/2008&lt;/td&gt;
+            &lt;td&gt;St. Louis&lt;/td&gt;
+            &lt;td class="currency"&gt;$3,300.37&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Laura&lt;/td&gt;
+            &lt;td&gt;02/12/2008&lt;/td&gt;
+            &lt;td&gt;Washington D.C.&lt;/td&gt;
+            &lt;td class="currency"&gt;$2,578.22&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Tim&lt;/td&gt;
+            &lt;td&gt;02/06/2008&lt;/td&gt;
+            &lt;td&gt;Seattle&lt;/td&gt;
+            &lt;td class="currency"&gt;$5,996.13&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
             </article>
 
             <article class="group" id="form-elements">
@@ -196,6 +362,73 @@
 
                     <button type="submit">Send it</button>
                 </form>
+
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;form action="" method="get"&gt;
+    &lt;fieldset&gt;
+        &lt;legend&gt;Contact Info&lt;/legend&gt;
+        &lt;p&gt;All fields are &lt;em class="required"&gt;*&lt;/em&gt; required.&lt;/p&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;label for="f_name"&gt;First name&lt;/label&gt;
+                &lt;input id="f_name" name="f_name" type="text"&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label for="l_name"&gt;Last name&lt;/label&gt;
+                &lt;input id="l_name" name="l_name" type="text"&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label for="email"&gt;Email&lt;/label&gt;
+                &lt;input id="email" name="email" type="email"&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset id="section-address"&gt;
+        &lt;legend&gt;Location&lt;/legend&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;label for="adr_1"&gt;Street address&lt;/label&gt;
+                &lt;input id="adr_1" name="adr_1" type="text"&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label for="adr_2"&gt;Address line two&lt;/label&gt;
+                &lt;input id="adr_2" name="adr_2" type="text"&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;label for="zip"&gt;ZIP&lt;/label&gt;
+                &lt;input id="zip" name="zip" type="text"&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/fieldset&gt;
+
+    &lt;fieldset id="comments"&gt;
+        &lt;legend&gt;Comments&lt;/legend&gt;
+        &lt;ol&gt;
+            &lt;li&gt;
+                &lt;label for="message"&gt;Message&lt;/label&gt;
+                &lt;textarea name="message" id="message" cols="30" rows="10"&gt;&lt;/textarea&gt;
+            &lt;/li&gt;
+        &lt;/ol&gt;
+    &lt;/fieldset&gt;
+
+    &lt;button type="submit"&gt;Send it&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+            </article>
+
+            <article class="group" id="media-embeds">
+                <h2>Media Embeds</h2>
+                <div class="media-wrapper">
+                    <iframe src="https://www.youtube.com/embed/4UHHEKdd9sc" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+<h4 class="code-header">Implementation</h4>
+<pre><code class="language-markup">
+&lt;div class="media-wrapper"&gt;
+    &lt;iframe src="https://www.youtube.com/embed/4UHHEKdd9sc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</code></pre>
             </article>
         </section><!-- /.content-main -->
 

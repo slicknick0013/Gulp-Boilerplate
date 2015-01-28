@@ -63,6 +63,14 @@ gulp.task('scripts', function () {
         .pipe(notify({message: 'Scripts task complete'}));
 });
 
+gulp.task('vendorscripts', function () {
+    return gulp.src('src/assets/js/vendor/*.js')
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('dist/assets/js/vendor'))
+        .pipe(gulp.dest('dist/assets/js/vendor'))
+        .pipe(notify({message: 'VendorScripts task complete'}));
+});
+
 gulp.task('images', function () {
     return gulp.src('src/assets/img/**/*')
         .pipe(cache(imagemin({
@@ -114,7 +122,7 @@ gulp.task('clean', function(cb) {
     del(['build', 'dist'], cb)
 });
 
-gulp.task('default', ['compass', 'scripts', 'images', 'svg'], function () {
+gulp.task('default', ['compass', 'scripts', 'vendorscripts', 'images', 'svg'], function () {
     notify({message: 'Default task complete'});
 });
 

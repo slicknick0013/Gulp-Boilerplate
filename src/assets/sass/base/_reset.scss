@@ -54,6 +54,10 @@ footer,header,hgroup,menu,nav,section {
     display:block;
 }
 
+ul, ol {
+    padding-left: 2em;
+}
+
 nav ul {
     list-style:none;
 }
