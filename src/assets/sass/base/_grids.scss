@@ -15,15 +15,17 @@ $grids-debug-color: rgba(68, 117, 153, 0.25);
         background-color: $grids-debug-color;
     }
 
-    .col {
-        @if $grids-debug == true {
-            background-color: $grids-debug-color;
-        }
+    @media screen and (min-width: $breakpoint-one) {
+        .col {
+            @if $grids-debug == true {
+                background-color: $grids-debug-color;
+            }
 
-        @include span(2 of 4);
+            @include span(2 of 4);
 
-        &:nth-child(2n+2) {
-            margin-right: 0;
+            &:nth-child(2n+2) {
+                margin-right: 0;
+            }
         }
     }
 }

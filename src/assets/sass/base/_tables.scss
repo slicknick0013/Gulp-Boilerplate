@@ -11,13 +11,16 @@ table {
     }
 
     thead {
-
+        th {
+            background-color: $color-th-bg;
+            color: $color-th;
+        }
     }
 
     tfoot,
     tbody {
         tr {
-            border-bottom: 1px solid $color-table-border;
+            //border-bottom: 1px solid $color-table-border;
 
             &:nth-child(even) {
                 background-color: $color-table-alt;
