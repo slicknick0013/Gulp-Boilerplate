@@ -1,0 +1,27 @@
+.nav-main {
+    ul {
+        @extend %scrub-list;
+        margin-bottom: 1px;
+        text-align: center;
+    }
+
+    li {
+        margin-top: -1px;
+    }
+
+    a {
+        background-color: $color-bright;
+        border: 1px solid;
+        border-left: 0;
+        border-right: 0;
+        color: $color-link;
+        display: block;
+        padding: $baseline/2 + px;
+
+        &:hover,
+        &:focus {
+            border-color: $color-link;
+            color: $color-link-hover;
+        }
+    }
+}

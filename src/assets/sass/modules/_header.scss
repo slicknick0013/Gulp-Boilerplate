@@ -1,0 +1,17 @@
+.header-main {
+    background-color: $color-header-bg;
+    padding: $baseline + px 0;
+
+    .brand {
+        margin: 0;
+    }
+}
+
+.menu {
+    @include setType(16);
+    display: inline-block;
+    margin: 0;
+    position: absolute;
+    right: 16px;
+    top: 12px;
+}
