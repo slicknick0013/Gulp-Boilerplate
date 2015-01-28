@@ -38,15 +38,15 @@ gulp.task('styles', function () {
 gulp.task('compass', function () {
     return gulp.src('src/assets/sass/*.scss')
         .pipe(compass({
+            config_file: 'src/assets/config.rb',
             css: 'src/assets/styles',
             sass: 'src/assets/sass',
-            image: 'src/assets/img',
-            require: ['susy']
+            image: 'src/assets/img'
         }))
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
-        .pipe(minifycss())
+        //.pipe(minifycss())
         .pipe(gulp.dest('dist/assets/styles'))
         .pipe(notify({message: 'Compass task complete'}));
 });
@@ -125,7 +125,7 @@ gulp.task('watch', function() {
     gulp.watch('build/**/*.html', ['htmlmin']);
 
     // Watch .scss files
-    gulp.watch('src/assets/sass/**/*.scss', ['styles']);
+    gulp.watch('src/assets/sass/**/*.scss', ['compass']);
 
     // Watch .js files
     gulp.watch('src/assets/js/**/*.js', ['scripts']);

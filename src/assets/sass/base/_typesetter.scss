@@ -1,7 +1,7 @@
 // require helpers/
 $browser-context: 16;
 $baseline: 24;
-$typesetter-horizontal-debug: false;
+$typesetter-horizontal-debug: true;
 $typesetter-vertical-debug: false;
 
 @mixin repeating-linear-gradient($gradients) {

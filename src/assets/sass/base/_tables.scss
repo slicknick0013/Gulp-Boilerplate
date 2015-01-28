@@ -1,0 +1,40 @@
+table {
+    border: 1px solid $color-table-border;
+    margin-top: -1px;
+    margin-bottom: -1px;
+    width: 100%;
+
+    th,
+    td {
+        padding: 0 6px;
+        text-align: center;
+    }
+
+    thead {
+
+    }
+
+    tfoot,
+    tbody {
+        tr {
+            border-bottom: 1px solid $color-table-border;
+
+            &:nth-child(even) {
+                background-color: $color-table-alt;
+            }
+        }
+    }
+
+    .left {
+        text-align: left;
+    }
+
+    .right,
+    .currency {
+        text-align: right;
+    }
+
+    .center {
+        text-align: center;
+    }
+}
