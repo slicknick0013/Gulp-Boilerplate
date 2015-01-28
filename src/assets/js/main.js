@@ -4,7 +4,8 @@ var main = (function (global, doc) {
     'use strict';
 
     var self = this;
-    console.log(self);
+
+    console.log(self == null ? 'self is null or undefined' : self);
 
     return {
         react: function (action, func) {
