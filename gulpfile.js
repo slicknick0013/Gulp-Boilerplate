@@ -4,6 +4,7 @@ var gulp         = require('gulp'),
     include      = require('gulp-file-include'),
     htmlmin      = require('gulp-minify-html'),
     sass         = require('gulp-ruby-sass'),
+    compass      = require('gulp-compass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss    = require('gulp-minify-css'),
     jshint       = require('gulp-jshint'),
@@ -18,43 +19,36 @@ var gulp         = require('gulp'),
     del          = require('del'),
     connect      = require('gulp-connect');
 
-gulp.task('include', function () {
-    return gulp.src('src/**/*.html')
-        .pipe(include({
-            prefix: '@@',
-            basepath: 'src'
-        }))
-        .pipe(gulp.dest('build'))
-        .pipe(notify({message: 'Include task complete'}));
-});
-
-gulp.task('htmlmin', function () {
-    var opts = {
-        comments: false,
-        quotes: true,
-        spare: true
-    };
-
-    return gulp.src('build/views/**/*.html')
-        .pipe(htmlmin(opts))
-        .pipe(gulp.dest('dist'))
-        .pipe(notify({message: 'HTMLmin task complete'}));
-});
-
 gulp.task('styles', function () {
     return sass('src/assets/sass/main.scss', {
             defaultEncoding: 'UTF-8',
             lineNumbers: true,
             precision: 10,
-            require: 'susy',
+            require: ['susy'],
             style: 'expanded'
         })
         .on('error', function (err) {
             console.error('Error!', err.message);
         })
-        .pipe(gulp.dest('dist/assets/styles'))
         .pipe(autoprefixer())
+        .pipe(gulp.dest('dist/assets/styles'))
         .pipe(notify({message: 'Styles task complete'}));
+});
+
+gulp.task('compass', function () {
+    return gulp.src('src/assets/sass/*.scss')
+        .pipe(compass({
+            css: 'src/assets/styles',
+            sass: 'src/assets/sass',
+            image: 'src/assets/img',
+            require: ['susy']
+        }))
+        .on('error', function (err) {
+            console.error('Error!', err.message);
+        })
+        .pipe(minifycss())
+        .pipe(gulp.dest('dist/assets/styles'))
+        .pipe(notify({message: 'Compass task complete'}));
 });
 
 gulp.task('scripts', function () {
@@ -87,6 +81,29 @@ gulp.task('svg', function () {
         .pipe(notify({message: 'SVG task complete'}));
 });
 
+gulp.task('include', function () {
+    return gulp.src('src/**/*.html')
+        .pipe(include({
+            prefix: '@@',
+            basepath: 'src'
+        }))
+        .pipe(gulp.dest('build'))
+        .pipe(notify({message: 'Include task complete'}));
+});
+
+gulp.task('htmlmin', function () {
+    var opts = {
+        comments: false,
+        quotes: true,
+        spare: true
+    };
+
+    return gulp.src('build/views/**/*.html')
+        .pipe(htmlmin(opts))
+        .pipe(gulp.dest('dist'))
+        .pipe(notify({message: 'HTMLmin task complete'}));
+});
+
 gulp.task('serve', function() {
     connect.server({
         root: 'dist/'
@@ -97,8 +114,8 @@ gulp.task('clean', function(cb) {
     del(['build', 'dist'], cb)
 });
 
-gulp.task('default', function () {
-    gulp.start('include', 'htmlmin', 'styles', 'scripts', 'images', 'svg');
+gulp.task('default', ['compass', 'scripts', 'images', 'svg'], function () {
+    notify({message: 'Default task complete'});
 });
 
 gulp.task('watch', function() {

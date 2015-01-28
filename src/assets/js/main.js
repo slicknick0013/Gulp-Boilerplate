@@ -4,6 +4,7 @@ var main = (function (global, doc) {
     'use strict';
 
     var self = this;
+    console.log(self);
 
     return {
         react: function (action, func) {
