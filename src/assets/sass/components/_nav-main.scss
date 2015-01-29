@@ -14,14 +14,48 @@
         border: 1px solid;
         border-left: 0;
         border-right: 0;
-        color: $color-link;
+        color: $color-nav-link;
         display: block;
         padding: $baseline/2 + px;
 
         &:hover,
         &:focus {
-            border-color: $color-link;
-            color: $color-link-hover;
+            border-color: $color-nav-link;
+            color: $color-nav-link-hover;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-one) {
+        background-color: $color-nav-bg;
+        border-bottom: 1px solid $color-nav-link;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+
+        li {
+            display: inline-block;
+            margin: 0 12px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            background-color: transparent;
+            border: 0;
+
+            &:hover,
+            &:focus {
+                background-color: $color-nav-bg-hover;
+                border-color: transparent;
+                color: $color-nav-link-hover;
+            }
         }
     }
 }

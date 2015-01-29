@@ -15,3 +15,13 @@
     right: 16px;
     top: 12px;
 }
+
+@media screen and (min-width: $breakpoint-one) {
+    .header-main {
+        padding-top: $baseline * 3 + px;
+    }
+
+    .menu {
+        top: -999em;
+    }
+}
