@@ -1,6 +1,8 @@
 .header-main {
     background-color: $color-header-bg;
     padding: $baseline + px 0;
+    position: relative;
+    z-index: 2;
 
     .brand {
         margin: 0;

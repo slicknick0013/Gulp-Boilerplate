@@ -1,0 +1,15 @@
+body {
+    -webkit-transition: padding .15s ease-in-out;
+    -moz-transition: padding .15s ease-in-out;
+    -o-transition: padding .15s ease-in-out;
+    -ms-transition: padding .15s ease-in-out;
+    transition: padding .15s ease-in-out;
+}
+
+.nav-main {
+    -webkit-transition: opacity .15s ease-in-out;
+    -moz-transition: opacity .15s ease-in-out;
+    -o-transition: opacity .15s ease-in-out;
+    -ms-transition: opacity .15s ease-in-out;
+    transition: opacity .15s ease-in-out;
+}

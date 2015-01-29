@@ -25,13 +25,19 @@
         }
     }
 
+    &.expanded {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
     @media screen and (min-width: $breakpoint-one) {
         background-color: $color-nav-bg;
         border-bottom: 1px solid $color-nav-link;
         position: absolute;
         top: 0;
         width: 100%;
-        z-index: 2;
+        z-index: 3;
 
         li {
             display: inline-block;

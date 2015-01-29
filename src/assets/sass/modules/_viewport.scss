@@ -1,0 +1,15 @@
+body {
+    @media screen and (min-width: $breakpoint-one) {
+        &:after {
+            content: "tablet";
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: $breakpoint-final) {
+        &:after {
+            content: "widescreen";
+            display: none;
+        }
+    }
+}
