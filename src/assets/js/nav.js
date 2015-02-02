@@ -1,10 +1,9 @@
 /* global document */
 (function (doc, nav_id, menu_id) {
 
-    var nav     = doc.getElementById(nav_id),
-        menu    = doc.getElementById(menu_id),
-        body    = doc.body,
-        padding = nav.clientHeight + 24;
+    var nav  = doc.getElementById(nav_id),
+        menu = doc.getElementById(menu_id),
+        body = doc.body;
 
     menu.setAttribute('data-is-expanded', 'false');
 
@@ -15,7 +14,7 @@
             // show
             menu.setAttribute('data-is-expanded', 'true');
             nav.classList.add('expanded');
-            body.style.paddingTop = padding + 'px';
+            body.style.paddingTop = nav.clientHeight + 'px';
         } else {
             // hide
             menu.setAttribute('data-is-expanded', 'false');
