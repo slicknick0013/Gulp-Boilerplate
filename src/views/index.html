@@ -1,78 +1,41 @@
 @@include('../src/views/inc/header.html', {
-    "title": "Style Guide",
-    "description": "Gulp Boilerplate style guide"
+    "title": "Home",
+    "description": "Nick Pruett Home Page"
 })
 
         <section class="content-main">
             <article class="group">
-                <h2>Grids</h2>
-                <p>The grid system uses <a href="http://susy.oddbird.net/" rel="external">Susy</a>, a Sass layout framework.</p>
+                <h2>About This Website:</h2>
+                <p>I created this website as a place to write down my current thoughts on design philosophy and
+                    implementation details that aren't specific to any single project I'm working on. Mostly, it's a place to communicate with myself about things I don't
+                    want to forget, and a place to house my <a href="/resume/">R&eacute;sum&eacute;</a>. It also serves as a place for me to do proof of concepts and to develop UI without a lot of
+                    overhead. With only a few modifications for this site (NickPruett.com) this is the basic boilerplate from which I begin. I start from a very neutral position and then work to build a specific brand.</p>
 
-                <h3>Example: <code>two-to-three</code></h3>
-                <div class="two-to-three">
-                    <div class="col">
-                        <h4>Moe Howard</h4>
-                        <p>The alpha stooge.</p>
-                    </div>
-                    <div class="col">
-                        <h4>Larry Fine</h4>
-                        <p>A virtuoso violinist, and middle stooge.</p>
-                    </div>
-                    <div class="col">
-                        <h4>Shemp Howard</h4>
-                        <p>Stooge antics led to post-traumatic stress disorder.</p>
-                    </div>
-                    <div class="col">
-                        <h4>Curly Howard</h4>
-                        <p>The funniest stooge and favorite by many.</p>
-                    </div>
-                    <div class="col">
-                        <h4>Joe</h4>
-                        <p>What can you say?</p>
-                    </div>
-                </div><!-- /.grid-vary -->
+                <h3>Website Details:</h3>
+                <p>
+                    This website uses a ruby framework called <a href="http://susy.oddbird.net">Susy</a> for the grid layout and much of the responsive design elements. Take a second to view the site on your
+                    phone or shrink your browser page to experience the various breakpoints. The menu at the top of the page is at the bottom of the HTML hierarchy and uses CSS to position it where I want it.
+                    On a smaller device it is a clickable entity. The server is ran on my home computer with my router forwarding traffic to a specific machine running node commands. I use <a href="http://gulpjs.com">Gulp.js</a>
+                    to simplify the build process for SCSS files and to automate minifying and concatenating files. Everything that is on here is ran without an app server so could be used in any project regardless of middle tier
+                    (Java, C#, PHP) etc. The URLs are search engine friendly using index files to be served up to generic URLs. IE: NickPruett.com/resume instead of NickPruett.com/resume.html
+                </p>
+                <h3>R&eacute;sum&eacute;:</h3>
+                <p>
+                    The <a href="/resume/">R&eacute;sum&eacute;</a> is the only thing that doesn't follow the standards for the rest of the site. It is built for print
+                    and was created long before this. It is an orphaned page so that I don't have to create something that strips out the nav/header/footer etc
+                    when it needs to be printed or converted to PDF.
+                </p>
+                <h3>Styleguide:</h3>
+                <p>
+                    The <a href="/styleguide/">Styleguide</a> is a place to present UI elements apart from specific implementation. The code that handles individual details
+                    is included below each section for code review and to verify standards once implemented by different people. The styleguide for my site has not really been altered from
+                    basic styles. If changes were wanted I could make a change and publish it publicly and stakeholders could discuss in real-time any thoughts on changes.
+                </p>
+                <h3>Modules:</h3>
+                <p>
+                    <a href="/modules/">Modules</a> is a place for me to put javascript modules that help to enhance the UI. I will be migrating some of the existing stuff I use here in the future.
+                </p>
             </article><!-- /.group -->
-
-            <article class="group">
-                <h2>Typography</h2>
-                <p>All typography and vertical rhythm uses base HTML elements (<code>h1, h2, p, table, etc.</code>) to set styles. The Sass module controlling this is a custom module found in <code>/src/assets/sass/base/_typesetter.scss</code></p>
-                <p>Headings get a sans-serif font while main body text gets a serif treatment. Those fonts are managed as variables and can be found in <code>/src/assets/sass/helpers/_variables.scss</code></p>
-            </article>
-
-            <article class="group">
-                <h2>Color</h2>
-                <p>Base colors are managed as variables and can be found in <code>/src/assets/sass/helpers/_variables.scss</code></p>
-
-                <ul class="palette">
-                    <li>
-                        <div class="swatch heading"></div>
-                        <h4 class="swatch-heading">Headings</h4>
-                    </li>
-                    <li>
-                        <div class="swatch main"></div>
-                        <h4 class="swatch-heading">Main</h4>
-                    </li>
-                    <li>
-                        <div class="swatch bright"></div>
-                        <h4 class="swatch-heading">White</h4>
-                    </li>
-                    <li>
-                        <div class="swatch link"></div>
-                        <h4 class="swatch-heading">Link</h4>
-                    </li>
-                    <li>
-                        <div class="swatch button"></div>
-                        <h4 class="swatch-heading">Button</h4>
-                    </li>
-                </ul>
-            </article>
-
-            <article class="group">
-                <h2>Horizonal Rule</h2>
-                <p>The <code>hr</code> element inherits basic styling. It relies on the margins from the elements above and below it to determine it&#8217;s relationship in space.</p>
-                <hr>
-                <p>The <code>hr</code> is a quick way to create separation inside content blocks.</p>
-            </article>
         </section><!-- /.content-main -->
 
 @@include('../src/views/inc/footer.html')

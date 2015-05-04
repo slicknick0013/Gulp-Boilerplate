@@ -99,6 +99,12 @@ gulp.task('include', function () {
         .pipe(notify({message: 'Include task complete'}));
 });
 
+
+gulp.task('secondStyles', function () {
+    return gulp.src('src/assets/styles/resume.css')
+        .pipe(gulp.dest('dist/assets/styles'))
+        .pipe(notify({message: 'secondStyles task complete'}));
+});
 gulp.task('htmlmin', function () {
     var opts = {
         comments: false,

@@ -6,8 +6,37 @@
         <section class="content-main">
             <div class="group">
                 <h1>Styleguide</h1>
-                <p>This styleguide covers <a href="#grids">grids</a>, <a href="#typography">typography</a>, <a href="#color">color</a>, <a href="#horizontalrules">horizontal rules</a>.</p>
+                <p>This styleguide covers <a href="#color">color</a>, <a href="#grids">grids</a>, <a href="#typography">typography</a>,
+                    <a href="#horizontalrules">horizontal rules</a>, <a href="#tables">tables</a>, <a href="#form-elements">forms</a>, <a href="#navigation">navigation</a> </p>
             </div>
+
+            <article class="group" id="color">
+                <h2>Color</h2>
+                <p>Base colors are managed as variables and can be found in <code>/src/assets/sass/helpers/_variables.scss</code></p>
+
+                <ul class="palette">
+                    <li>
+                        <div class="swatch heading"></div>
+                        <h4 class="swatch-heading">Headings</h4>
+                    </li>
+                    <li>
+                        <div class="swatch main"></div>
+                        <h4 class="swatch-heading">Main</h4>
+                    </li>
+                    <li>
+                        <div class="swatch bright"></div>
+                        <h4 class="swatch-heading">White</h4>
+                    </li>
+                    <li>
+                        <div class="swatch link"></div>
+                        <h4 class="swatch-heading">Link</h4>
+                    </li>
+                    <li>
+                        <div class="swatch button"></div>
+                        <h4 class="swatch-heading">Button</h4>
+                    </li>
+                </ul>
+            </article>
 
             <article class="group" id="grids">
                 <h2>Grids</h2>
@@ -194,33 +223,7 @@
 </code></pre>
             </article>
 
-            <article class="group" id="color">
-                <h2>Color</h2>
-                <p>Base colors are managed as variables and can be found in <code>/src/assets/sass/helpers/_variables.scss</code></p>
 
-                <ul class="palette">
-                    <li>
-                        <div class="swatch heading"></div>
-                        <h4 class="swatch-heading">Headings</h4>
-                    </li>
-                    <li>
-                        <div class="swatch main"></div>
-                        <h4 class="swatch-heading">Main</h4>
-                    </li>
-                    <li>
-                        <div class="swatch bright"></div>
-                        <h4 class="swatch-heading">White</h4>
-                    </li>
-                    <li>
-                        <div class="swatch link"></div>
-                        <h4 class="swatch-heading">Link</h4>
-                    </li>
-                    <li>
-                        <div class="swatch button"></div>
-                        <h4 class="swatch-heading">Button</h4>
-                    </li>
-                </ul>
-            </article>
 
             <article class="group" id="horizontalrules">
                 <h2>Horizonal Rule</h2>
@@ -420,20 +423,19 @@
             <article class="group" id="media-embeds">
                 <h2>Media Embeds</h2>
                 <div class="media-wrapper">
-                    <iframe src="https://www.youtube.com/embed/4UHHEKdd9sc" frameborder="0" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/dMH0bHeiRNg" frameborder="0" allowfullscreen></iframe>
                 </div>
-
 <h4 class="code-header">Implementation</h4>
 <pre><code class="language-markup">
 &lt;div class="media-wrapper"&gt;
-    &lt;iframe src="https://www.youtube.com/embed/4UHHEKdd9sc" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
+    &lt;iframe src="https://www.youtube.com/embed/dMH0bHeiRNg" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 </code></pre>
             </article>
 
             <article class="group" id="navigation">
                 <h2>Main Navigation</h2>
-                <p>Navigation is there to help, not the main focus. The main focus is the content, so the navigation is the last thing in the content hierarchy. Because of this, CSS is there to help us position the <code>nav</code> wherever we want it without sacrificing the semantics and structure of our content. A menu link is added at the top of the content to link down to the bottom. Later, we can use JavaScript to change the behavior of the menu anchor and display the <code>nav</code> in different ways (an expand/contract pattern comes to mind).</p>
+                <p>Navigation is there to help, not the main focus. The main focus is the content, so the navigation is the last thing in the content hierarchy. Because of this, CSS is there to help us position the <code>nav</code> wherever we want it without sacrificing the semantics and structure of our content. A menu link is added at the top of the content to link down to the bottom. Later, we can use JavaScript to change the behavior of the menu anchor and display the <code>nav</code> in different ways.</p>
             </article>
         </section><!-- /.content-main -->
 
